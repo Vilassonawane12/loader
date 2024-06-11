@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Loader</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+             width:100% ;
+             height: 100vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+        }
+        .loader{
+            display: flex;
+            gap: 0.25rem;
+        }
+        .loader .dot{
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+
+            /* background-color: #121212; */
+            background:#009DC6
+        }
+        .loader .dot{
+            animation:  bounce 0.5s infinite alternate;
+        }
+        @keyframes bounce {
+            to{
+                translate: 0 -0.25rem;
+            }
+        }
+        .loader .dot:nth-child(2){
+            animation-delay: 100ms;
+            background:#e8b440;
+        }
+        .loader .dot:nth-child(3){
+            animation-delay: 100ms;
+            background:#b62327;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</body>
+</html>
